@@ -76,8 +76,20 @@ Generate access tokens:
 - Under First, assign a scope to your bot token
    - Click on `Review Scopes to Add` 
 - Go to `Scopes` section
+       - Click on `Add an OAuth Scope`
+       - Choose the following from the list:
+       	- im:history
+       	- chat:write
+       	- channels:history
+       	- im:write
+       	- chat:write:public
+- As the above is done, a message `You can now show tabs on App HomeManage which tabs your user sees in your app’s home. Go to App Home` will appear.
 
-   
+- Scroll the page up and go to the section `OAuth Tokens for Your Workspace`
+- Click on the button `Install to workspace` and click on `Allow`
+- Once successful, you will be directed to the `OAuth Tokens for Your Workspace` section
+- Click on the Copy Button to copy the Bot User OAuth Token. Note that it starts with xoxb-
+- In Linx Settings, paste the token in BotUserOAuth   
        
 ---
 
