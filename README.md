@@ -118,8 +118,8 @@ Requests are authenticated via a Bearer access token included in the `Authorizat
 
 When making requests to the GitHub, you must also include the following header:
 
-```http
-application/x-www-form-urlencoded , application/json
+```
+Accept: application/x-www-form-urlencoded , application/json
 ```
 ---
 
