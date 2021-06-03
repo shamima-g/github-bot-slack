@@ -27,7 +27,7 @@ Once this GitHub-Slack integration is active, the sample posts messages to Slack
 
 - Linx Designer
 - Github account
-- Slack account with atleas a channel
+- Slack account
 
 ### Linx Designer
 
@@ -37,7 +37,7 @@ This solution was developed in the Linx Designer `v5.21.0.0`
 
 ## Setting up the sample
 
-Register a new app on GitHub:
+#### Register a new app on GitHub:
 
 1. Register a new 'OAuth application' on GitHub
 1. Configure the 'Authorization callback URL' to be: `http://localhost:8080/oauth/token`
@@ -65,17 +65,17 @@ Generate access tokens:
 5. View success message.
 ---
 #### Get a bot user token in Slack
-- [Create a new app](https://api.slack.com/apps)
-- Choose from Scratch.  
+1. [Create a new app](https://api.slack.com/apps)
+2. Choose from Scratch.  
        - Enter App Name, e.g linx-bot-github
        - Choose a workspace and click on create app
 
-- Under Add features and functionality 
+3. Under Add features and functionality 
   - Click on `Bots`
 
-- Under First, assign a scope to your bot token
+4. Under First, assign a scope to your bot token
    - Click on `Review Scopes to Add` 
-- Go to `Scopes` section
+5. Go to `Scopes` section
        - Click on `Add an OAuth Scope`
        - Choose the following from the list:
        	- im:history
@@ -83,13 +83,13 @@ Generate access tokens:
        	- channels:history
        	- im:write
        	- chat:write:public
-- As the above is done, a message `You can now show tabs on App HomeManage which tabs your user sees in your app’s home. Go to App Home` will appear.
+6. As the above is done, a message `You can now show tabs on App HomeManage which tabs your user sees in your app’s home. Go to App Home` will appear.
 
-- Scroll the page up and go to the section `OAuth Tokens for Your Workspace`
-- Click on the button `Install to workspace` and click on `Allow`
-- Once successful, you will be directed to the `OAuth Tokens for Your Workspace` section
-- Click on the Copy Button to copy the Bot User OAuth Token. Note that it starts with xoxb-
-- In Linx Settings, paste the token in BotUserOAuth   
+7. Scroll the page up and go to the section `OAuth Tokens for Your Workspace`
+8. Click on the button `Install to workspace` and click on `Allow`
+9. Once successful, you will be directed to the `OAuth Tokens for Your Workspace` section
+10. Click on the Copy Button to copy the Bot User OAuth Token. Note that it starts with `xoxb-`
+11. In Linx Settings, paste the token in BotUserOAuth   
        
 ---
 
