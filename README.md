@@ -70,17 +70,17 @@ Generate access tokens:
 #### Get a bot user token in Slack
 1. [Create a new app](https://api.slack.com/apps)
 2. Choose from Scratch.  
-       - Enter App Name, e.g linx-bot-github
-       - Choose a workspace and click on create app
+      - Enter App Name, e.g linx-bot-github
+      - Choose a workspace and click on create app
 
 3. Under Add features and functionality 
-  - Click on `Bots`
+      - Click on `Bots`
 
 4. Under First, assign a scope to your bot token
-  - Click on `Review Scopes to Add` 
+      - Click on `Review Scopes to Add` 
 5. Go to `Scopes` section
-  - Click on `Add an OAuth Scope`
-    - Choose the following from the list:
+      - Click on `Add an OAuth Scope`
+       - Choose the following from the list:
        	- im:history
        	- chat:write
        	- channels:history
@@ -118,7 +118,9 @@ Requests are authenticated via a Bearer access token included in the `Authorizat
 
 When making requests to the GitHub, you must also include the following header:
 
-`application/x-www-form-urlencoded , application/json`
+```http
+application/x-www-form-urlencoded , application/json
+```
 ---
 
 ## GitHub Utilities samples 
