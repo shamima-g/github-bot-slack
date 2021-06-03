@@ -17,8 +17,11 @@ Once this GitHub-Slack integration is active, the sample posts messages to Slack
 - [GitHub-Linx integration guide](https://community.linx.software/community/t/oauth-2-0-authentication-github-example/487)
 - [GitHub API authentication documentation](https://docs.github.com/en/rest)
 - [GitHub API documentation](https://docs.github.com/en/rest/reference/repos#list-organization-repositories)
-- [https://api.slack.com/apps](Create New App in Slack)
-
+- [Create New App in Slack](https://api.slack.com/apps)
+- [Slack API documentation](https://api.slack.com/apis)
+- [Test apis from browser](https://api.slack.com/methods/chat.postMessage/test)
+- [Slack reference for block kit](https://api.slack.com/reference/block-kit)
+- [Find your Channel](https://stackoverflow.com/questions/40940327/what-is-the-simplest-way-to-find-a-slack-team-id-and-a-channel-id)
 ---
 
 ## Dependencies
@@ -27,7 +30,7 @@ Once this GitHub-Slack integration is active, the sample posts messages to Slack
 
 - Linx Designer
 - Github account
-- Slack account with atleas a channel
+- Slack account
 
 ### Linx Designer
 
@@ -37,7 +40,7 @@ This solution was developed in the Linx Designer `v5.21.0.0`
 
 ## Setting up the sample
 
-Register a new app on GitHub:
+#### Register a new app on GitHub:
 
 1. Register a new 'OAuth application' on GitHub
 1. Configure the 'Authorization callback URL' to be: `http://localhost:8080/oauth/token`
@@ -65,37 +68,36 @@ Generate access tokens:
 5. View success message.
 ---
 #### Get a bot user token in Slack
-- [Create a new app](https://api.slack.com/apps)
-- Choose from Scratch.  
-       - Enter App Name, e.g linx-bot-github
-       - Choose a workspace and click on create app
+1. [Create a new app](https://api.slack.com/apps)
+2. Choose from Scratch.  
+      - Enter App Name, e.g linx-bot-github
+      - Choose a workspace and click on create app
 
-- Under Add features and functionality 
-  - Click on `Bots`
+3. Under Add features and functionality 
+      - Click on `Bots`
 
-- Under First, assign a scope to your bot token
-   - Click on `Review Scopes to Add` 
-- Go to `Scopes` section
-       - Click on `Add an OAuth Scope`
+4. Under First, assign a scope to your bot token
+      - Click on `Review Scopes to Add` 
+5. Go to `Scopes` section
+      - Click on `Add an OAuth Scope`
        - Choose the following from the list:
        	- im:history
        	- chat:write
        	- channels:history
        	- im:write
        	- chat:write:public
-- As the above is done, a message `You can now show tabs on App HomeManage which tabs your user sees in your app’s home. Go to App Home` will appear.
-
-- Scroll the page up and go to the section `OAuth Tokens for Your Workspace`
-- Click on the button `Install to workspace` and click on `Allow`
-- Once successful, you will be directed to the `OAuth Tokens for Your Workspace` section
-- Click on the Copy Button to copy the Bot User OAuth Token. Note that it starts with xoxb-
-- In Linx Settings, paste the token in BotUserOAuth   
+6. As the above is done, a message `You can now show tabs on App HomeManage which tabs your user sees in your app’s home. Go to App Home` will appear.
+7. Scroll the page up and go to the section `OAuth Tokens for Your Workspace`
+8. Click on the button `Install to workspace` and click on `Allow`
+9. Once successful, you will be directed to the `OAuth Tokens for Your Workspace` section
+10. Click on the Copy Button to copy the Bot User OAuth Token. Note that it starts with `xoxb-`
+11. In Linx Settings, paste the token in BotUserOAuth   
        
 ---
 
 ## Using the sample
 
-### Authentication
+### Authentication for GitHub
 
 After your app has been successfully authorized, the access token is stored in a local text file.
 
@@ -110,10 +112,18 @@ When making requests to the GitHub, you must also include the following header:
 ```http
 User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 YaBrowser/16.3.0.7146 Yowser/2.5 Safari/537.36
 ```
+### Authentication for Slack
 
+Requests are authenticated via a Bearer access token included in the `Authorization` header of each request.
+
+When making requests to the GitHub, you must also include the following header:
+
+```http
+application/x-www-form-urlencoded , application/json
+```
 ---
 
-## Utilities samples
+## GitHub Utilities samples 
 
 ### GetReposForOwner
 
@@ -139,6 +149,9 @@ Parameters:
 ### MailCommitForRepo
 The function uses the repositories' list and commit list from the above function and mail the commit details to the recipient.
 ---
+## Slack Utilities samples 
+
+---
 ## Running the Sample
 
 Click on the function named RUN
@@ -147,4 +160,7 @@ Enter parameters as follows:
 - `Per_page`: 1
 - `Since`: start date of commits (e.g Yesterday's date or any other date before ‘until date below’: 2021-05-26)
 - `Until`: end date of commits (e.g Today's date : 2021-05-27)
+---
+## Slack Utilities samples 
+
 
