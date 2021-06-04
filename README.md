@@ -87,7 +87,7 @@ Note that access token generated is stored in the file's path defined in `TokenL
        	- chat:write
        	- channels:history
        	- im:write
-       	- chat:write:public
+       	- chat:write.public
 6. As the above is done, a message `You can now show tabs on App HomeManage which tabs your user sees in your app’s home. Go to App Home` will appear.
 7. Scroll the page up and go to the section `OAuth Tokens for Your Workspace`
 8. Click on the button **Install to workspace** and click on **Allow**
