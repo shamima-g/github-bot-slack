@@ -54,9 +54,9 @@ This solution was developed in the Linx Designer `v5.21.0.0`
 1. Open the solution in your Linx Designer.
 1. Edit the $.Settings values:
 
-   - `ClientId`: Your GitHub app’s **Client ID**
-   - `ClientSecret`: Your GitHub app’s **Client Secret**
-   - `Owner`: Insert the owner of your repository.  E.g From the link https://github.com/linx-software, linx-software is the owner.   
+   - `GitHubClientId`: Your GitHub app’s **Client ID**
+   - `GitHubClientSecret`: Your GitHub app’s **Client Secret**
+   - `GitHubOwner`: Insert the owner of your repository.  E.g From the link https://github.com/linx-software, linx-software is the owner.   
 
 1. Save the Solution.
 
@@ -95,8 +95,8 @@ Note that access token generated is stored in the file's path defined in `TokenL
 10. Click on the **Copy** Button to copy the Bot User OAuth Token. Note that it starts with `xoxb-`
 
 #### Configure the Solution's $.Settings for Slack :
-1. `BotUserOAuth`: Paste the **token** copied above
-2. `Channel` : Enter **channel Id or channel name**. [How to find your Channel Id in Slack](https://stackoverflow.com/questions/40940327/what-is-the-simplest-way-to-find-a-slack-team-id-and-a-channel-id)   
+1. `SlackBotUserOAuth`: Paste the **token** copied above
+2. `SlackChannel` : Enter **channel Id or channel name**. [How to find your Channel Id in Slack](https://stackoverflow.com/questions/40940327/what-is-the-simplest-way-to-find-a-slack-team-id-and-a-channel-id)   
        
 ---
 
