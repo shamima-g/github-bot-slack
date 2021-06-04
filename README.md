@@ -80,7 +80,7 @@ Note that access token generated is stored in the file's path defined in `TokenL
 
 4. Under 'First, assign a scope to your bot token'
       - Click on **Review Scopes to Add** 
-5. Go to `Scopes` sectio
+5. Go to `Scopes` section
       - Click on **Add an OAuth Scope**
        - Choose the following from the list:
        	- im:history
