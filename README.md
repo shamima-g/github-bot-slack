@@ -75,13 +75,13 @@ Note that access token generated is stored in the file's path defined in `TokenL
       - Enter App Name, e.g linx-bot-github
       - Choose a workspace and click on create app
 
-3. Under Add features and functionality 
-      - Click on `Bots`
+3. Under 'Add features and functionality' 
+      - Click on **Bots**
 
-4. Under First, assign a scope to your bot token
-      - Click on `Review Scopes to Add` 
-5. Go to `Scopes` section
-      - Click on `Add an OAuth Scope`
+4. Under 'First, assign a scope to your bot token'
+      - Click on **Review Scopes to Add** 
+5. Go to `Scopes` sectio
+      - Click on **Add an OAuth Scope**
        - Choose the following from the list:
        	- im:history
        	- chat:write
@@ -90,9 +90,9 @@ Note that access token generated is stored in the file's path defined in `TokenL
        	- chat:write:public
 6. As the above is done, a message `You can now show tabs on App HomeManage which tabs your user sees in your app’s home. Go to App Home` will appear.
 7. Scroll the page up and go to the section `OAuth Tokens for Your Workspace`
-8. Click on the button `Install to workspace` and click on `Allow`
+8. Click on the button **Install to workspace** and click on **Allow**
 9. Once successful, you will be directed to the `OAuth Tokens for Your Workspace` section
-10. Click on the Copy Button to copy the Bot User OAuth Token. Note that it starts with `xoxb-`
+10. Click on the **Copy** Button to copy the Bot User OAuth Token. Note that it starts with `xoxb-`
 
 #### Configure the Solution's $.Settings for Slack :
 1. `BotUserOAuth`: Paste the **token** copied above
@@ -130,13 +130,13 @@ Accept: application/x-www-form-urlencoded , application/json
 
 ## GitHub Utilities samples 
 
-### Get_Repos_For_Owner
+### GetReposForOwner
 
 Lists repositories for the specified organization.
 
 https://docs.github.com/en/rest/reference/repos#list-organization-repositories
 
-### Get_Commits
+### GetCommits
 
 The Repo Commits API supports listing, viewing, and comparing commits in a repository.
 
@@ -153,23 +153,23 @@ Parameters:
 
 ---
 ## Slack Utilities samples 
-### Authorization_Test
+### AuthorizationTest
 A function to test if you've entered the right token and the right channel.  Tests the api https://slack.com/api/auth.test.
 
-### Get_Customized_Commits_For_Repos
+### GetCustomizedCommitsForRepos
 Reads commits from GitHub and populates cutomized types.
 - Parameters:
-   Same parameters as in Get_Commits above.
+   Same parameters as in GetCommits above.
 - Result:
    `commitList` : List of customized commits
 ### Build_Blocks
 Messages can be sent to Slack with different parameters.  In this section, we build blocks that are sent as JSON to Slack.
 - Parameters:
-   - Same parameters as in Get_Customized_Commits_For_Repos above.
-   - 'commitList' from 'Get_Customized_Commits_For_Repos' above   
+   - Same parameters as in GetCustomizedCommitsForRepos above.
+   - 'commitList' from 'GetCustomizedCommitsForRepos' above   
 - Result:
    `blocks` : String type that stores the JSON blocks
-### Post_Message_API
+### PostMessageAPI
 Calls the Post message API https://api.slack.com/methods/chat.postMessage
 - Parameters:
    - `blocks` : String type in JSON format  
@@ -177,7 +177,7 @@ Calls the Post message API https://api.slack.com/methods/chat.postMessage
 ---
 ## Running the Sample
 
-In the Slack Folder, Click on the function named Post_Message_To_Slack
+In the Slack Folder, Click on the function named PostMessageToSlack
 Enter parameters as follows:
 
 - `Per_page`: 1
