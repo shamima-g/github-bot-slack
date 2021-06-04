@@ -159,9 +159,9 @@ A function to test if you've entered the right token and the right channel.  Tes
 ### GetCustomizedCommitsForRepos
 Reads commits from GitHub and populates cutomized types.
 - Parameters:
-   Same parameters as in GetCommits above.
+   - Same parameters as in GetCommits above.
 - Result:
-   `commitList` : List of customized commits
+   - `commitList` : List of customized commits
 ### Build_Blocks
 Messages can be sent to Slack with different parameters.  In this section, we build blocks that are sent as JSON to Slack.
 - Parameters:
