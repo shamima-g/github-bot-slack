@@ -169,7 +169,7 @@ Messages can be sent to Slack with different parameters.  In this section, we bu
 - Result:
    `blocks` : String type that stores the JSON blocks
 ### Post_Message_API
-A function that calls the Post message API.
+Calls the Post message API https://api.slack.com/methods/chat.postMessage
 - Parameters:
    - `blocks` : String type in JSON format  
    - `text`:  String type.     
