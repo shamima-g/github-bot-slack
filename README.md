@@ -67,6 +67,7 @@ Generate access tokens:
 3. You will be redirected to the GitHub OAuth 2.0 access consent screen.
 4. Authorize the connected application.
 5. View success message.
+Note that access token generated is stored in the file's path defined in `TokenLogPath` in Solution's $.Settings
 ---
 #### Get a bot user token from Slack
 1. [Create a new app](https://api.slack.com/apps)
@@ -94,8 +95,8 @@ Generate access tokens:
 10. Click on the Copy Button to copy the Bot User OAuth Token. Note that it starts with `xoxb-`
 
 #### Configure the Solution's $.Settings for Slack :
-1. `BotUserOAuth`: Paste the token copied above
-2. `Channel` : Enter channel Id or channel name. [How to find your Channel Id in Slack](https://stackoverflow.com/questions/40940327/what-is-the-simplest-way-to-find-a-slack-team-id-and-a-channel-id)   
+1. `BotUserOAuth`: Paste the **token** copied above
+2. `Channel` : Enter **channel Id or channel name**. [How to find your Channel Id in Slack](https://stackoverflow.com/questions/40940327/what-is-the-simplest-way-to-find-a-slack-team-id-and-a-channel-id)   
        
 ---
 
