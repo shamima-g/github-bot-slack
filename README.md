@@ -162,13 +162,13 @@ Reads commits from GitHub and populates cutomized types.
    - Same parameters as in GetCommits above.
 - Result:
    - `commitList` : List of customized commits
-### Build_Blocks
+### BuildBlocks
 Messages can be sent to Slack with different parameters.  In this section, we build blocks that are sent as JSON to Slack.
 - Parameters:
    - Same parameters as in GetCustomizedCommitsForRepos above.
    - 'commitList' from 'GetCustomizedCommitsForRepos' above   
 - Result:
-   `blocks` : String type that stores the JSON blocks
+   - `blocks` : String type that stores the JSON blocks
 ### PostMessageAPI
 Calls the Post message API https://api.slack.com/methods/chat.postMessage
 - Parameters:
